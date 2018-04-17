@@ -3,21 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Faça seu Login</title>
+    <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body>
-    <img width="200" height="200" src ="https://st2.depositphotos.com/1423984/9446/v/950/depositphotos_94466120-stock-illustration-user-login-or-authenticate-icon.jpg" alt="imagem de login">
+    <div class="login">
+    <img width="200" height="200" src ="usuario.png" alt="imagem de login">
 
-    <form class="" method="post">
-      <label>Usuário ou e-mail:</label><br>
-      <input type="email" name="email" value="" placeholder="usuario@email.com"><br>
+      <form class="" method="post">
+        <label>Usuário ou e-mail:</label><br>    <!--E-MAIL-->
+        <input class="campo" type="email" name="email" value="" placeholder="usuario@email.com"><br>
 
-      <label>Senha:</label><br>
-      <input type="password" name="senha" value=""><br>
+        <label>Senha:</label><br>                                        <!--senha-->
+        <input class="campo" type="password" name="senha" value=""><br> <!--class do campo-->
 
-      <input type="submit" name="" value="Entrar"><br>
-    </form>
-    <a href="#">Esqueceu a senha?
-    </a>
+        <input class="botao" type="submit" name="" value="Entrar"><br>
+      </form>
+      <a class="esqueceu" href="#">Esqueceu a senha?
+      </a>
 
+    </div>
   </body>
-</html>
+  </html>
