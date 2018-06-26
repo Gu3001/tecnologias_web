@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Calculadora </title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+    $("#soma").click(function(){
+      var num1 = $("#num1").val();
+      var num2 = $("#num2").val();
+      num1 = parseFloat(num1);
+      num2 = parseFloat(num2);
+      var result = num1 + num2
+      $("#resultado").text(result);
+    });
+    $("#sub").click(function(){
+      var num1 = $("#num1").val();
+      var num2 = $("#num2").val();
+      num1 = parseFloat(num1);
+      num2 = parseFloat(num2);
+      var result = num1 - num2
+      $("#resultado").text(result);
+    });
+    $("#div").click(function(){
+      var num1 = $("#num1").val();
+      var num2 = $("#num2").val();
+      num1 = parseFloat(num1);
+      num2 = parseFloat(num2);
+      var result = num1 / num2
+      $("#resultado").text(result);
+    });
+    $("#mult").click(function(){
+      var num1 = $("#num1").val();
+      var num2 = $("#num2").val();
+      num1 = parseFloat(num1);
+      num2 = parseFloat(num2);
+      var result = num1 * num2
+      $("#resultado").text(result);
+    });
+
+    });
+
+
+    </script>
+  </head>
+  <body>
+    <form class="" action="" method="">
+      <input type="number" name="num1" id="num1">
+      <input type="number" name="num2" id="num2">
+      <br><br>
+      <button id="soma" type="button" name="soma"> + </button>
+      <button id="sub" type="button" name="sub"> - </button>
+      <button id="div" type="button" name="div"> / </button>
+      <button id="mult" type="button" name="mult"> x </button>
+
+    </form>
+    <p id="resultado">Resultado aqui</p>
+  </body>
+</html>

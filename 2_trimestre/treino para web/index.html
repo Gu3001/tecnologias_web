@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teste Jquerre e JavaScript</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        // alert("A pagina está pronta");
+        // $("h1").css("color","#f66");
+        // $("h1").hide();
+        // $("h1").delay("1000");
+        // $("h1").fadeIn("slow");
+        // $("h1").text("Substitui o texto de H1"); //substitui o outro texto de H1
+        // //Outra forma de colocar as funções, pode ser em uma linha tbm...
+        // $("h2")
+        //   .css("color","#44e")
+        //   .hide().delay("1000")
+        //   .fadeIn("slow")
+        //   .click(function(){ //função de click, muda a cor de fundo e da letra
+        //     $("body").css("background","#C30")
+        //     $("h1").css("color","#fff")
+        //     $("h2").text("Seu texto H2 foi mudado");
+        //   }); //evento
+        // $("a").css({color:"red", display:"block"});
+        // $("#comId").css("color","green");
+        ////Formulario
+        var textoH4 = $("h4");
+
+        $("#data").click(function(){
+            alert("Focus funcionando");
+            $("#div1").css({border:"solid"});
+       textoH4.text("Mudou o texto");
+
+        });
+        $("#btnIr").click(function(){
+
+          if( $("input[name='q']").val() == "" ){
+
+              alert("Preencha alguma coisa para pesquisar!");
+              $("input[name='q']").focus();
+
+            } else if( $("input[name='q']").val().length < 3 ){
+              alert("Digite mais do que 2 caracteres");
+              $("input[name='q']").focus();
+
+            }else {
+              $("#formGoogle").submit();
+            }
+        });
+
+      });//fecha script
+
+    </script>
+  </head>
+  <body>
+    <h1>Teste 1 2 3</h1>
+    <h2>Texto H2</h2>
+    <h3 id="comId">texto la la la h3</h3>
+    <div id="div1">
+      <h4>Texto</h4>
+    </div>
+
+
+
+
+    <a href="#">Link1</a>
+    <a href="#">Link2</a>
+    <a href="#">Link3</a>
+  </body>
+
+  <!--Formulário-->
+  <form id="formRegistrar" action="" method="post">
+  <label>Nascimento</label><br>
+  <input type="date" id="data" name="nasc" value=""><br>
+
+  <label>Usuário</label>
+  <input type="text" name="usuario" value="" placeholder="Dígite um usuário"><br>
+
+  <label>E-mail</label><br>
+  <input type="email" name="email" value=""><br>
+
+  <label>Senha</label><br>
+  <input type="password" name="senha" value=""><br>
+
+  <label>Plano</label><br>
+  <select name="plano">
+    <option value="">Selecione um plano</option>
+    <option value="10">Basic</option>
+  </select>
+<br>
+  <input type="submit" value="Registrar">
+  <input type="reset" value="Limpar">
+  </form>
+
+<!--Formulário do Google-->
+<h3>Google</h3>
+<form id="formGoogle" action="https://www.google.com.br/search" method="get">
+  <input type="text" name="q" value="">
+  <input type="button" name="" value="Botão Ir" id="btnIr">
+</form>
+
+</html>
