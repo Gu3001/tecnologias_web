@@ -3,35 +3,55 @@
   <head>
     <meta charset="utf-8">
     <title>Exercícios de JQuery</title>
+    <link rel="stylesheet" href="./css/galeria.css">
+
     <script src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript">
 
     $(document).ready(function() {
       //-------------------------------------------------exercio 1----------
-      $("#img1").hover(function(){ //Quando passa o mouse em cima
-        $("#img1").attr("src", "http://i.stack.imgur.com/ybxlO.jpg")//isso troca o link da imagem o "SRC";
+      $("#img").hover(function(){ //Quando passa o mouse em cima
+        $("#img").attr("src", "http://i.stack.imgur.com/ybxlO.jpg")//isso troca o link da imagem o "SRC";
       });
-      $("#img1").mouseout(function(){ //Quando passa o mouse para fora
-        $("#img1").attr("src", "http://i.stack.imgur.com/b983w.jpg");
+      $("#img").mouseout(function(){ //Quando passa o mouse para fora
+        $("#img").attr("src", "http://i.stack.imgur.com/b983w.jpg");
       });
       //-------------------------------------------------exercio 2----------
-
+      $("#img1").click(function(){
+        $("#foto").attr("src", "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&h=350");
+        $()
+      });
+      $("#img2").click(function(){
+        $("#foto").attr("src", "https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg?auto=compress&cs=tinysrgb&h=350");
+      });
+      $("#img3").click(function(){
+        $("#foto").attr("src", "http://www.topimagens.com.br/imagens/imagens-mais-novas.jpg");
+      });
+      $("#img4").click(function(){
+        $("#foto").attr("src", "https://images.unsplash.com/photo-1494249465471-5655b7878482?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=191559dc1cae3f8967d568dfd8a77093&w=1000&q=80");
+      });
+      $("#img5").click(function(){
+        $("#foto").attr("src", "https://blog.fotolia.com/br/files/2017/09/fotolia_117306153-.jpg");
+      });
     });
+
 
     </script>
   </head>
   <body>
     <h2>Pergunta 1</h2>
-    <img src="http://i.stack.imgur.com/b983w.jpg" alt="" id="img1">
+    <img src="http://i.stack.imgur.com/b983w.jpg" alt="" id="img">
 
     <h2>Pergunta 2</h2>
     <div class="fotoPrincipal">
-
+      <img id="foto" height="350px" width="500"src="https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&h=350" alt="">
     </div>
-    <img class="miniatura" src="https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&h=350" alt="">
-    <img class="miniatura" src="https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
-    <img class="miniatura" src="https://i.imgur.com/rpeUYTq.jpg" alt="">
-    <img class="miniatura" src="https://images.unsplash.com/photo-1494249465471-5655b7878482?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=191559dc1cae3f8967d568dfd8a77093&w=1000&q=80" alt="">
+
+    <img id="img1" class="miniatura" src="https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&h=350" alt="">
+    <img id="img2" class="miniatura" src="https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg?auto=compress&cs=tinysrgb&h=350" alt="">
+    <img id="img3" class="miniatura" src="http://www.topimagens.com.br/imagens/imagens-mais-novas.jpg" alt="">
+    <img id="img4" class="miniatura" src="https://images.unsplash.com/photo-1494249465471-5655b7878482?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=191559dc1cae3f8967d568dfd8a77093&w=1000&q=80" alt="">
+    <img id="img5" class="miniatura" src="https://blog.fotolia.com/br/files/2017/09/fotolia_117306153-.jpg" alt="">
 
 
   </body>

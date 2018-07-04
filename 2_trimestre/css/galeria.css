@@ -1,0 +1,21 @@
+body{
+  text-align: center;
+  background-color: #b7b7b7;
+}
+.fotoPrincipal{
+  background-color: #fffff0;
+  margin: 20px auto;
+  width: 500px;
+  height: 350px;
+  border: solid 10px #ffffff;
+}
+
+
+.miniatura{
+  background-color: #ffffff;
+  width: 200px;
+  height: 150px;
+  padding: 5px;
+  border: solid 1px #000000;
+
+}
