@@ -1,21 +1,32 @@
 body{
   text-align: center;
-  background-color: #b7b7b7;
+}
+p{
+  text-align: left;
+  margin-left: 40px;
+  margin-left: 40px;
 }
 .fotoPrincipal{
+  padding: 10px;
   background-color: #fffff0;
   margin: 20px auto;
   width: 500px;
   height: 350px;
-  border: solid 10px #ffffff;
+  border: solid 3px #aaa;
+  border-radius: 5px;
 }
-
-
 .miniatura{
   background-color: #ffffff;
   width: 200px;
   height: 150px;
   padding: 5px;
-  border: solid 1px #000000;
-
+  border: solid 1px #aaa;
+}
+.imgPrincipal{
+  height: 350px;
+  width: 500px;
+}
+#anterior, #proximo{
+  height: 100px;
+  margin: 20px;
 }
