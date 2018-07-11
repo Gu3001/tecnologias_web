@@ -9,14 +9,14 @@
     <script type="text/javascript">
 
     $(document).ready(function() {
-      //-------------------------------------------------exercio 1----------
+      //-------------------------------------------------exercício 1----------
       $("#img").hover(function(){ //Quando passa o mouse em cima
         $("#img").attr("src", "http://i.stack.imgur.com/ybxlO.jpg")//isso troca o link da imagem o "SRC";
       });
       $("#img").mouseout(function(){ //Quando passa o mouse para fora
         $("#img").attr("src", "http://i.stack.imgur.com/b983w.jpg");
       });
-      //-------------------------------------------------exercio 2----------
+      //-------------------------------------------------exercício 2----------
       $("#img1").click(function(){
         $("#foto").attr("src", "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?auto=compress&cs=tinysrgb&h=350");
         $()
@@ -33,39 +33,69 @@
       $("#img5").click(function(){
         $("#foto").attr("src", "https://blog.fotolia.com/br/files/2017/09/fotolia_117306153-.jpg");
       });
-    });
-      //-------------------------------------------------exercio 3----------
+
+      //-------------------------------------------------exercício 3----------
       var opcao = 1
+
       $("#anterior").click(function(){
-        i = opcao + 1;
-        alert(i);
+        opcao = opcao - 1;
+
+        if (opcao == 1) {
+          $("#noticia").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_KS5Ixre7PWqt-y3_b1czJEH5-Q98FUBE457jtsZTB-o8BdO");
+          }
+        else if (opcao == 2) {
+          $("#noticia").attr("src", "http://www.lance.com.br/files/main_album/uploads/2018/07/06/5b3fd42adeb4d.jpeg");
+          }
+        else if (opcao == 3) {
+          $("#noticia").attr("src", "https://jovemnerd.com.br/wp-content/uploads/ads_jornalbrasil_3108.jpg");
+          }
+        else if (opcao == 4) {
+          $("#noticia").attr("src", "https://www.pobresservos.org.br/simposiovocacional/wp-content/uploads/2016/05/not%C3%ADcias_regionais_simposio.jpg");
+          }
       });
+
       $("#proximo").click(function(){
-        opcao = i - 1;
-        alert(i);
+        opcao = opcao + 1;
+
+        if (opcao == 1) {
+          $("#noticia").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_KS5Ixre7PWqt-y3_b1czJEH5-Q98FUBE457jtsZTB-o8BdO");
+          }
+        else if (opcao == 2) {
+          $("#noticia").attr("src", "http://www.lance.com.br/files/main_album/uploads/2018/07/06/5b3fd42adeb4d.jpeg");
+          }
+        else if (opcao == 3) {
+          $("#noticia").attr("src", "https://jovemnerd.com.br/wp-content/uploads/ads_jornalbrasil_3108.jpg");
+          }
+        else if (opcao == 4) {
+          $("#noticia").attr("src", "https://www.pobresservos.org.br/simposiovocacional/wp-content/uploads/2016/05/not%C3%ADcias_regionais_simposio.jpg");
+          }
       });
-      alert(opcao)
-      //talvez é possível colocar uma variável no html
-      // if (opcao = 1) {
-      //   alert("oloco")
-      //   }
-      // if (opcao = 2) {
-      //   alert("oloco2")
-      //   }
-      // if (opcao = 3) {
-      //   alert("oloco3")
-      //   }
-      // if (opcao = 4) {
-      //   alert("oloco4")
-      //   }
+      //-------------------------------------------------exercício 4----------
+      $("#lamp").click(function(){
+        $("#lamp").attr("src", "http://i.stack.imgur.com/MRjsF.jpg");
 
+        $("#lamp").hover(function(){
+          $("#lamp").attr("src", "http://i.stack.imgur.com/MRjsF.jpg");
+        });
+        $("#lamp").mouseout(function(){
+          $("#lamp").attr("src", "http://i.stack.imgur.com/MRjsF.jpg");
+        });
+      });
+      //Se não for clicado
+      $("#lamp").hover(function(){
+        $("#lamp").attr("src", "http://i.stack.imgur.com/ybxlO.jpg");
+      });
+      $("#lamp").mouseout(function(){
+        $("#lamp").attr("src", "http://i.stack.imgur.com/b983w.jpg");
+      });
 
+    });
     </script>
   </head>
   <body>
     <h2>Pergunta 1</h2>
     <p>Crie um arquivo HTML vazio e adicione no conteúdo uma imagem de uma lâmpada apagada. Ao passar o mouse por cima da imagem (deixando ele parado em cima), utilize o jQuery para alterar a imagem atual para uma lâmpada acesa. Se tirar o mouse de cima dela, altere novamente para uma lâmpada apagada.</p>
-    <img src="http://i.stack.imgur.com/b983w.jpg" alt="" id="img">
+    <img id="img" src="http://i.stack.imgur.com/b983w.jpg" alt="">
 
     <h2>Pergunta 2</h2>
     <p>Uma empresa quer montar uma galeria de fotos no seu website. Nessa galeria, eles querem uma foto grande e cinco miniaturas em baixo. Ao clicar em uma miniatura, a foto grande dela deve aparecer. Utilize o jQuery para fazer esse esquema de galeria.</p>
@@ -92,5 +122,7 @@
     <br><br><br><br><br>
     <h2>Pergunta 4</h2>
   <p>Faça o esquema das lâmpadas semelhante ao exercício um. Porém, ao clicar na lâmpada ela deve ser quebrada (http://i.stack.imgur.com/MRjsF.jpg). Uma vez quebrada, ela não pode ser acesa ou apagada novamente (só se o usuário atualizar a página).</p>
+  <img id="lamp" src="http://i.stack.imgur.com/b983w.jpg" alt="">
+
   </body>
 </html>
