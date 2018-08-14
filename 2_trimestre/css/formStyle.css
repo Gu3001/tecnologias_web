@@ -21,7 +21,7 @@ a{
   margin-bottom: 20px;
   height: 20px;
   width: 50px;
-  display:inline-block;
+  display:inline-block; /*lado a lado*/
   background-color: #546684;
 }
 input{
