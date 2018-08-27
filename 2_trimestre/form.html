@@ -13,6 +13,15 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
     <title>Formulário</title>
     <link rel="stylesheet" href="css/formStyle.css">
 
+    <script src="bootstrap/bootstrap.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link href="bootstrap/signin.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
     <script src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
@@ -47,20 +56,39 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
     </script>
     <!--oculta as outras abas de formulario-->
     <style media="screen">
-      #form2, #form3, #form4{
-        display: none
-      }
+     #form2, #form3, #form4{
+      display: none
+    }
     </style>
   </head>
-  <body>
-    <div class="layout">
+  <body class="text-center">
+    <div class="fixed-top">
 
-      <a href="#" id="aba1">aba 1</a>
-      <a href="#" id="aba2">aba 2</a>
-      <a href="#" id="aba3">aba 3</a>
-      <a href="#" id="aba4">aba 4</a>
 
-      <form id="formRegistrar" action="" method="post">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarText">
+          <h4 class="text-primary">Faça seu Cadastro!</h4>
+
+          <ul class="navbar-nav mr-auto" class="text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="aba1">Aba 1<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="aba2">Aba 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="aba3">Aba 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="aba4">Aba 4</a>
+            </li>
+          </ul>
+
+      </nav>
+    </div>
+
+    <form class="form-signin" action="" method="post">
       <div id="form1">
         <label>Nome</label><br>
         <input type="text" name="nome" value="" placeholder="insira seu nome"><br>
@@ -100,11 +128,9 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
         <label>Senha</label><br>
         <input type="password" name="senha" value=""><br>
         <br><br>
-        <input type="submit" name="" value="Registrar">
-        <input type="reset" name="" value="Limpar">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+        <p class="mt-5 mb-3 text-muted">&copy;Obrigado pela paciência!</p>
       </div>
-
-      </form>
-  </div>
+    </form>
   </body>
 </html>

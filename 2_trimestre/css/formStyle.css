@@ -1,4 +1,4 @@
-body{
+/* body{
   text-align: center;
   background-color: #b1bac9;
 }
@@ -21,9 +21,9 @@ a{
   margin-bottom: 20px;
   height: 20px;
   width: 50px;
-  display:inline-block; /*lado a lado*/
+  display:inline-block; 
   background-color: #546684;
 }
 input{
   border-radius: 10px;
-}
+} */
