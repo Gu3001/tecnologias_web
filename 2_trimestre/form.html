@@ -25,6 +25,8 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
     <script src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
+
+      //configuração da Aba
       $("#aba1").click(function(){
         $("#form1").fadeIn(1000);
         $("#form2").hide();
@@ -49,7 +51,37 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
         $("#form2").hide();
         $("#form3").hide();
       });
+      //configuração da seta
+      $("#seta1").click(function(){
+        $("#form2").fadeIn(1000);
+        $("#form1").hide();
+        $("#form3").hide();
+        $("#form4").hide();
+      });
+      $("#seta2").click(function(){
+        $("#form3").fadeIn(1000);
+        $("#form1").hide();
+        $("#form2").hide();
+        $("#form4").hide();
+      });
+      $("#seta3").click(function(){
+        $("#form4").fadeIn(1000);
+        $("#form1").hide();
+        $("#form2").hide();
+        $("#form3").hide();
+      });
+      //evitar que o formulario seja enviado vazio, sem os campos obrigatórios.
+      $("form").submit(function(event){
+        $(".obrigatorio").each(function(){
+          if($(this).val() == ""){
+            event.preventDefault();
+            var campo = $(this).attr("name");
+            $(".aviso").append("<p><font style = color:red > O campo " + campo + " é obrigatório!</p>")
 
+          }
+
+        });
+      });
 
     });
 
@@ -59,20 +91,22 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
      #form2, #form3, #form4{
       display: none
     }
+    #config{
+      margin-left: auto;
+    }
     </style>
   </head>
   <body class="text-center">
-    <div class="fixed-top">
+    <div class="fixed-top" >
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <!-- Navbar content -->
         <div class="collapse navbar-collapse" id="navbarText">
-          <h4 class="text-primary">Faça seu Cadastro!</h4>
 
-          <ul class="navbar-nav mr-auto" class="text-center">
+          <ul class="navbar-nav mr-auto" class="text-center" id="config">
             <li class="nav-item">
-              <a class="nav-link" href="#" id="aba1">Aba 1<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#" id="aba1">Aba 1</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="aba2">Aba 2</a>
@@ -89,26 +123,34 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
     </div>
 
     <form class="form-signin" action="" method="post">
+      <div class="aviso">
+
+      </div>
       <div id="form1">
+        <img height="180px" width="200px" src="http://portal.sistemavbs.com.br/img/user-icon.png" alt="">
+        <h4 class="text-primary">Faça seu Cadastro!</h4>
         <label>Nome</label><br>
-        <input type="text" name="nome" value="" placeholder="insira seu nome"><br>
+        <input class="obrigatorio" type="text" name="nome" value="" placeholder="insira seu nome"><br>
         <label>RG</label><br>
-        <input type="text" name="rg" value="" placeholder="insira o RG"><br>
+        <input class="obrigatorio" type="text" name="rg" value="" placeholder="insira o RG"><br>
         <label>CPF</label><br>
         <input type="text" name="cpf" value="" placeholder="insira o CPF"><br>
 
         <label>Endereço</label><br>
-        <input type="text" name="endereco" value="" placeholder="Insira o endereço"><br>
+        <input type="text" name="endereco" value="" placeholder="Insira o endereço"><br><br>
+        <img id="seta1"width="50px" height="50px" src="https://cdn.pixabay.com/photo/2017/06/20/14/55/icon-2423349_960_720.png" alt="">
 
       </div>
       <div id="form2">
         <label>Formação acadêmica</label><br>
-        <select name="formacao">
+        <select class="obrigatorio" name="formacao">
           <option value="">Selecione a formação</option>
           <option value="1">Ensino básico</option>
           <option value="2">ensino superior</option>
           <option value="3">especialização</option>
-        </select>
+        </select><br><br>
+        <img id="seta2"width="50px" height="50px" src="https://cdn.pixabay.com/photo/2017/06/20/14/55/icon-2423349_960_720.png" alt="">
+
       </div>
 
       <div id="form3">
@@ -117,18 +159,21 @@ A empresa quer criar um único formulário para cadastrar todos os dados, porém
         <label>Data de Saída</label><br>
         <input type="date" name="dataSaida" value=""><br>
         <label>Função</label><br>
-        <input type="text" name="funcao" value=""><br>
+        <input class="obrigatorio" type="text" name="funcao" value=""><br>
         <label>Nome da Empresa</label><br>
-        <input type="text" name="empresa" value=""><br>
+        <input class="obrigatorio" type="text" name="empresa" value=""><br><br>
+        <img id="seta3"width="50px" height="50px" src="https://cdn.pixabay.com/photo/2017/06/20/14/55/icon-2423349_960_720.png" alt="">
+
       </div>
 
       <div id="form4">
         <label>E-mail</label><br>
-        <input type="email" name="email" value=""><br>
+        <input class="obrigatorio" type="email" name="email" value=""><br>
         <label>Senha</label><br>
-        <input type="password" name="senha" value=""><br>
+        <input class="obrigatorio" type="password" name="senha" value=""><br>
         <br><br>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+
         <p class="mt-5 mb-3 text-muted">&copy;Obrigado pela paciência!</p>
       </div>
     </form>
