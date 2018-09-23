@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plugin jquerry</title>
+
+    <!-- carregar bibliotecas do plugin no jquerry-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="slider-master/js/jssor.slider.min.js">
+
+    </script>
+
+    <script src="bootstrap/bootstrap.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+
+
+
+  </head>
+  <!-- Estilo do plugin-->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <style type="text/css">
+
+  body {
+      background-color: #1B1B1B;
+      background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+      text-align: center;
+      color: #fff;
+      font-family: 'Roboto';
+      min-height: 100vh;
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+  }
+
+  img {
+      vertical-align: top;
+  }
+
+  .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+  ul li {
+      list-style: none;
+  }
+
+  .banner {
+      display: inline-block;
+  }
+
+  #banner1 h1 {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .5);
+      line-height: 50px;
+      color: yellow;
+  }
+
+  #ctrl {
+      text-align: center;
+  }
+
+  </style>
+
+
+  <body>
+  <!--estrutura da navbar--------------------------------------------------------------------->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--botões-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+
+      <!--barra de busca-->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+  <!--Código do plugin slide---------------------------------------------------------------------------->
+  <h1>Compact-Carousel-Myscroll</h1>
+      <div class="banner" id="banner1">
+          <div class="move" id="move">
+              <ul>
+                  <li><h1>3,99</h1><img src="https://placeimg.com/1000/460/animals" alt="" width="450" height="260"></li>
+                  <li><h1>jQueryScript.net</h1><img src="https://placeimg.com/1000/460/arch" alt="" width="450" height="260"></li>
+                  <li><h1>jQueryScript.net</h1><img src="https://placeimg.com/1000/460/nature" alt="" width="450" height="260"></li>
+                  <li><h1>jQueryScript.net</h1><img src="https://placeimg.com/1000/460/people" alt="" width="450" height="260"></li>
+                  <li><h1>jQueryScript.net</h1><img src="https://placeimg.com/1000/460/tech" alt="" width="450" height="260"></li>
+              </ul>
+          </div>
+          <div class="ctrl" id="ctrl"></div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/myscroll.js"></script>
+      <script type="text/javascript">
+      $(function() {
+          $('#banner1').myscroll({
+              picEl: $('#move'),
+              ctrlEl: $('#ctrl'),
+              libs: true,
+              arrows: true,
+              autoPlay: true,
+              time: 2000,
+              speed: 1000,
+              effect: 'left',
+              hover: false
+          });
+      })
+      </script>
+  </body>
+</html>
