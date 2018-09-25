@@ -6,6 +6,7 @@
 
     <!-- carregar bibliotecas do plugin no jquerry-->
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="slider-master/js/jssor.slider.min.js">
 
     </script>
@@ -21,10 +22,10 @@
   <style type="text/css">
 
   body {
-      background-color: #1B1B1B;
-      background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+      background-color: #ffffff;
+
       text-align: center;
-      color: #fff;
+      color: #000000;
       font-family: 'Roboto';
       min-height: 100vh;
   }
@@ -57,7 +58,7 @@
       width: 100%;
       height: 50px;
       bottom: 0;
-      left: 0;
+      left: 0;popper
       background-color: rgba(0, 0, 0, .5);
       line-height: 50px;
       color: yellow;
@@ -139,11 +140,19 @@
               arrows: true,
               autoPlay: true,
               time: 2000,
-              speed: 1000,
+              speed: 2000,
               effect: 'left',
               hover: false
           });
       })
       </script>
+
+      <p>teste</p>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+         <a class="dropdown-item" href="#">Action</a>
+         <a class="dropdown-item" href="#">Another action</a>
+         <a class="dropdown-item" href="#">Something else here</a>
+       </div>
+     </div>
   </body>
 </html>
