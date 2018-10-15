@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script src="js/jquery-3.3.1.js"></script>
-
+    <!-- Código style do plugin ====================================================-->
     <style>
     body {
       background-color: #ffffff;
@@ -126,31 +126,43 @@
       </script>
 
       <!--Explicações=================================-->
-      <div class="conteudo">
+      <div class="container">
         <a href="#final">Ir para o final</a>
 
         <h1>O que é o plugin?</h1>
         <p>Basicamente se trata de um slideshow de imagens automático que além de ser leve (5.29 KB), pode ser facilmente configurado.</p>
+        <br><br>
 
         <h1>Como faz para utilizá-lo?</h1>
-        <p>Primeiramente Acesse esse link para baixar o plugin:</p>
-        <a href="https://www.jqueryscript.net/slider/Compact-Carousel-Myscroll.html#viewSource" target="_blank">
-        <img width="200" height="80" src="https://mbtskoudsalg.com/images/png-gospel-music-mp3-download-7.png" alt=""></a>
-        <p>Depois de baixado, copie os arquivos das pastas CSS e JS para o seu projeto.</p>
-        <img src="img/arq.jpg" width="220" height="120" alt="">
+        <div class="card" style="width: 18rem;" >
+          <div class="card-body">
+            <p>Primeiramente Acesse esse link para baixar o plugin:</p>
+            <a href="https://www.jqueryscript.net/slider/Compact-Carousel-Myscroll.html#viewSource" target="_blank">
+            <img width="200" height="80" src="https://mbtskoudsalg.com/images/png-gospel-music-mp3-download-7.png" alt=""></a>
+          </div>
+        </div><br>
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <p>Depois de baixado, copie os arquivos das pastas CSS e JS para o seu projeto.</p>
+            <img src="img/arq.jpg" width="200" height="120" alt="">
+          </div>
+        </div><br><br>
+
 
         <h1>Demonstração do código para utilizá-lo</h1>
-
-
-        <p class="bordas">Copie do arquivo "INDEX.HTML" os seguintes códigos: <br>
-          Primeiro dentro de "Head" do seu código, insira onde colocou o arquivo CSS que foi baixado.
+        <div class="alert alert-primary" role="alert">
+        <p><b>Copie do arquivo "INDEX.HTML" os seguintes códigos: </b><br>
+          Primeiro dentro de "HEAD" do seu código, insira onde colocou o arquivo CSS que foi baixado.
           Não esqueça de referenciar o arquivo jquery padrão.</p>
+        </div>
 
           <pre style='color:#000000;background:#ffffff;'><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>link</span><span style='color:#274796; '> </span><span style='color:#074726; '>rel</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"stylesheet"</span><span style='color:#274796; '> </span><span style='color:#074726; '>type</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"text/css"</span><span style='color:#274796; '> </span><span style='color:#074726; '>href</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"css/index.css"</span><span style='color:#a65700; '>></span>
 <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#274796; '> </span><span style='color:#074726; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"js/jquery-3.3.1.js"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span>
 </pre>
-
-        <p class="bordas"><b>Em seguida insira esse código ainda dentro de "HEAD"</b></p>
+        <div class="alert alert-primary" role="alert">
+          <p>Em seguida insira esse código ainda dentro de "HEAD"</p>
+        </div>
 
         <pre style='color:#000000;background:#ffffff;'><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
     <span style='color:#800000; font-weight:bold; '>body</span> <span style='color:#800080; '>{</span>
@@ -194,7 +206,9 @@
 
   <span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>style</span><span style='color:#a65700; '>></span>
 </pre>
-        <p class="bordas"><b> Agora Insira essa parte do código de "INDEX.HTML" em "BODY" do seu arquivo html. Essa parte se trata das imagens do slideshow.</b></p>
+        <div class="alert alert-primary" role="alert">
+          <p>Agora Insira essa parte do código de "INDEX.HTML" em "BODY" do seu arquivo html. Essa parte se trata das imagens do slideshow.</p>
+        </div>
 
 
         <pre style='color:#000000;background:#ffffff;'><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>h1</span><span style='color:#a65700; '>></span>Compact-Carousel-Myscroll<span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>h1</span><span style='color:#a65700; '>></span>
@@ -214,8 +228,9 @@
 </pre>
 
 
-
-    <p class="bordas"><b>Por fim Insira esse código em "BODY" do seu código. Esse é o menu de controle do slide, não esqueça de colocar o endereço do arquivo myscroll.js</b></p>
+    <div class="alert alert-primary" role="alert">
+    <p>Por fim Insira esse código em "BODY" do seu código. Esse é o menu de controle do slide, não esqueça de colocar o endereço do arquivo myscroll.js</p>
+  </div>
 
 <pre style='color:#000000;background:#ffffff;'><span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#274796; '> </span><span style='color:#074726; '>src</span><span style='color:#808030; '>=</span><span style='color:#0000e6; '>"js/myscroll.js"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span>
 <span style='color:#a65700; '>&lt;</span><span style='color:#800000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span>

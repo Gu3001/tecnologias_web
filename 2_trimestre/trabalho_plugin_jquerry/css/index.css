@@ -81,10 +81,3 @@ p{
   font-weight: 500;
   font-size: 20px;
 }
-
-.bordas{
-margin: 10px;
-border: solid, 3px, black;
-width: 700px;
-background-color: rgba(0, 0, 0, 0.2);
-}
