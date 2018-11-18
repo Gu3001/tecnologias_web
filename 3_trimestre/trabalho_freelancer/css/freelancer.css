@@ -382,3 +382,6 @@ a:focus, a:hover, a:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
+#meuSlider{
+  background-size: 70px;
+}
