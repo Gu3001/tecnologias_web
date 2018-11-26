@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.slide {display:none;}
+</style>
+<body>
+<div class="w3-content w3-display-container">
+  <img class="slide" src="https://scontent.fumu1-1.fna.fbcdn.net/v/t1.0-9/43248190_1358873454246036_3396266237083254784_n.jpg?_nc_cat=103&_nc_ht=scontent.fumu1-1.fna&oh=130bd5f753335d57f74558999fe0450e&oe=5CB0C860" style="width:100%">
+  <img class="slide" src="https://scontent.fumu1-1.fna.fbcdn.net/v/t1.0-9/43206926_1358855547581160_1793357980922544128_n.jpg?_nc_cat=107&_nc_ht=scontent.fumu1-1.fna&oh=e0235c58aecac9dc1c5cdc273b4ab36c&oe=5C67B485" style="width:100%">
+  <img class="slide" src="https://scontent.fumu1-1.fna.fbcdn.net/v/t1.0-9/30581359_1210449852421731_3984963735791856252_n.jpg?_nc_cat=110&_nc_ht=scontent.fumu1-1.fna&oh=1e0b36bb0b9631db6c94a0acc1c21bad&oe=5C815167" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
+</div>
+
+<>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</>
+
+</body>
+</html>
